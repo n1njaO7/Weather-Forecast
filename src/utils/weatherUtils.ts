@@ -4,27 +4,27 @@ export function getWeatherBackground(weatherMain: string, icon: string): string 
   switch (weatherMain.toLowerCase()) {
     case 'clear':
       return isDayTime 
-        ? 'from-blue-400 via-blue-500 to-blue-600'
-        : 'from-indigo-900 via-purple-900 to-blue-900';
+        ? 'from-[#6a11cb] to-[#2575fc]' // Changed: Custom gradient for clear day weather
+        : 'from-[#6a11cb] to-[#2575fc]'; // Changed: Custom gradient for clear night weather
     case 'clouds':
       return isDayTime
-        ? 'from-gray-400 via-gray-500 to-gray-600'
-        : 'from-gray-700 via-gray-800 to-gray-900';
+        ? 'from-[#6a11cb] to-[#2575fc]' // Changed: Custom gradient for cloudy day weather
+        : 'from-[#6a11cb] to-[#2575fc]'; // Changed: Custom gradient for cloudy night weather
     case 'rain':
     case 'drizzle':
-      return 'from-gray-600 via-blue-700 to-blue-800';
+      return 'from-[#6a11cb] to-[#2575fc]'; // Changed: Custom gradient for rainy weather
     case 'thunderstorm':
-      return 'from-gray-800 via-gray-900 to-black';
+      return 'from-[#6a11cb] to-[#2575fc]'; // Changed: Custom gradient for thunderstorm weather
     case 'snow':
-      return 'from-blue-200 via-blue-300 to-blue-400';
+      return 'from-[#6a11cb] to-[#2575fc]'; // Changed: Custom gradient for snowy weather
     case 'mist':
     case 'fog':
     case 'haze':
-      return 'from-gray-300 via-gray-400 to-gray-500';
+      return 'from-[#6a11cb] to-[#2575fc]'; // Changed: Custom gradient for misty/foggy weather
     default:
       return isDayTime
-        ? 'from-blue-400 via-blue-500 to-blue-600'
-        : 'from-indigo-900 via-purple-900 to-blue-900';
+        ? 'from-[#6a11cb] to-[#2575fc]' // Changed: Custom gradient for default day weather
+        : 'from-[#6a11cb] to-[#2575fc]'; // Changed: Custom gradient for default night weather
   }
 }
 

@@ -14,7 +14,7 @@ function App() {
 
   const backgroundGradient = weather 
     ? getWeatherBackground(weather.current.weather.main, weather.current.weather.icon)
-    : 'from-blue-400 via-blue-500 to-blue-600';
+    : 'from-[#6a11cb] to-[#2575fc]'; // Changed: Default loading background uses custom gradient
 
   const handleLocationSelect = (lat: number, lon: number) => {
     fetchWeatherData(lat, lon);
